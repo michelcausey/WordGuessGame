@@ -1,12 +1,11 @@
 // class = start-text make this disappear 
 
 // create a list of words
-var wordArray = ["Nicole", "Alyssa", "Mike", "David", "Jean", "Michael", "MiChel", "Josue"]
+var wordArray = ["Flute", "Clarinet", "Oboe", "Bassoon", "Saxophone", "Trumpet", "Baritone", "Trombone", "Sousaphone", "Drums", "Guitar", "Violin", "Cello"]
 
 //track guesses
-var lettersGuessed = ["a", "e", "i", "o", "u"];
+var lettersGuessed = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// give JavaScript a function to execute when onkeyup event fires
 document.onkeyup = function (event) {
     var displayWords = document.getElementById("display-words");
     console.log("You pressed:" + event.key)
@@ -15,20 +14,17 @@ document.onkeyup = function (event) {
     var randomWord = wordGenerator();
     console.log(randomWord)
 
-    var tempString = "<p>"; // display the paragraph from HTML
-    for (var i = 0; i < randomWord.length; i++) { // a for loop to show the vowels in the random word
+    var tempString = "<p>";
+    for (var i = 0; i < randomWord.length; i++) { 
         if (lettersGuessed.includes(randomWord[i].toLowerCase())) {
-            tempString += randomWord[i] + " "; //add randomWord to the temp string -- += means add to the string
+            tempString += randomWord[i] + " "; 
         } else {
             tempString += "_ ";
         }
     }
-    // output the stuff
 
-    tempString += "</p>"; // end the paragraph 
-    displayWords.textContent = tempString; // change the content displayed on HTML
-    displayWords.innerHTML = tempString // don't show the <p> or </p> around the word
-    console.log(tempString)
+    tempString += "</p>";
+    console.log(tempString);
 
 }
 
@@ -38,6 +34,9 @@ var wordGenerator = function () {
     return wordArray[wordIndex];
 }
 
-// make a function called "Update Display"
-// check if right / wrong then display the counter
-// lettersGuessed.push(event.key.toLowerCase()) -- use in hangman game
+// * display the number of spaces in the chosen word under the jumbotron
+// * display the letters already guessed -- make sure letters can't be guessed multiple times
+// * display number of remaining guesses before game over
+// * replace spaces in the word with the correctly guessed letter
+// * notice stating "Gave Over" or "You Win"
+// * make the style look nicer
