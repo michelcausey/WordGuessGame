@@ -1,10 +1,10 @@
-// class = start-text make this disappear 
-
 // create a list of words
 var wordArray = ["Flute", "Clarinet", "Oboe", "Bassoon", "Saxophone", "Trumpet", "Baritone", "Trombone", "Sousaphone", "Drums", "Guitar", "Violin", "Cello"]
 
 //track guesses
-var lettersGuessed = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lettersGuessed = [];
+
+var displayWords = $(".display-words")
 
 document.onkeyup = function (event) {
     var displayWords = document.getElementById("display-words");
@@ -14,18 +14,15 @@ document.onkeyup = function (event) {
     var randomWord = wordGenerator();
     console.log(randomWord)
 
-    var tempString = "<p>";
-    for (var i = 0; i < randomWord.length; i++) { 
+    var tempString = "";
+    for (var i = 0; i < randomWord.length; i++) {
         if (lettersGuessed.includes(randomWord[i].toLowerCase())) {
-            tempString += randomWord[i] + " "; 
+            tempString += randomWord[i] + " ";
         } else {
             tempString += "_ ";
         }
     }
-
-    tempString += "</p>";
     console.log(tempString);
-
 }
 
 // Select a random word -- return gets a value back from the function -- assigned outside the generator
@@ -34,9 +31,12 @@ var wordGenerator = function () {
     return wordArray[wordIndex];
 }
 
-// * display the number of spaces in the chosen word under the jumbotron
-// * display the letters already guessed -- make sure letters can't be guessed multiple times
-// * display number of remaining guesses before game over
-// * replace spaces in the word with the correctly guessed letter
-// * notice stating "Gave Over" or "You Win"
-// * make the style look nicer
+for (i = 0; i < wordArray.length; i++) {
+    // if (the letter guessed is in the random word)
+    // then display the letter
+    // else if the letter guessed is not in the random word)
+    // then display "_" instead    
+    // display the guessed letter on the screen
+    // after 10 incorrect guesses, display "GAME OVER"
+    // if user guesses the correct word, display "You Win!"
+}
