@@ -21,7 +21,6 @@ var guessedLetters = document.getElementById("letters-guessed")
 var keyToStart = document.getElementById("key-to-start")
 var guessesRemaining = document.getElementById("guesses-remaining")
 
-
 var wordGenerator = function () {
     var wordIndex = Math.floor(Math.random() * instruments.length);
     return instruments[wordIndex];
@@ -60,7 +59,7 @@ document.onkeyup = function (event) {
     if (guessCount === 0 && answer.includes("_")) {
         alert("Game Over!")
         losses++
-        lossCount.innerHTML = losses
+        lossCount.innerHTML = ("Losses: " + losses)
         endGame()
     } else if (!answer.includes("_")) {
         alert(chosenWord + " is correct, You Win!")
@@ -82,9 +81,6 @@ var start = function () {
         answer[i] = "_"
     }
     keyToStart.innerHTML = "<style>visiblity: hidden</style>"
-
-
-
 }
 
 var endGame = function () {
