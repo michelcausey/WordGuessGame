@@ -1,7 +1,5 @@
-// create a list of words
 var instruments = ["Flute", "Clarinet", "Oboe", "Bassoon", "Saxophone", "Trumpet", "Baritone", "Trombone", "Sousaphone", "Drums", "Guitar", "Violin", "Cello"]
 
-//track guesses
 var lettersGuessed = [];
 var underscore = [];
 var chosenWord = "";
@@ -60,11 +58,13 @@ document.onkeyup = function (event) {
         alert("Game Over!")
         losses++
         lossCount.innerHTML = ("Losses: " + losses)
+        winCount.innerHTML = ("Wins: " + wins)
         endGame()
     } else if (!answer.includes("_")) {
         alert(chosenWord + " is correct, You Win!")
         wins++
         winCount.innerHTML = ("Wins: " + wins)
+        lossCount.innerHTML = ("Losses: " + losses)
         endGame()
     }
 }
@@ -80,6 +80,7 @@ var start = function () {
     for (i = 0; i < chosenWord.length; i++) {
         answer[i] = "_"
     }
+    displayWords.innerHTML = answer.join(" ")
     keyToStart.innerHTML = "<style>visiblity: hidden</style>"
 }
 

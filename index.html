@@ -11,44 +11,33 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body background="./images/country-quilt.png">
-
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">Word Guess Game</span>
-        </nav>
-    </div>
-    <!--
-
-4. replace any key to start with the underscores _ _ _ for the words
-
-# start the application #
-- create a list of words
-- select a word randomly (Random Word Generator)
-- display the word
-
-1. press any key to play again-->
+<body style="background-image: url('./images/country-quilt.png">
 
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4" id="key-to-start" style="text-align: center">Press Any Key To Start</h1>
-            <h2 class="display-5 start-text" style="text-align: center">You have 10 chances to guess the right musical instrument</h2>
-            <img src="./images/Multiple_instruments.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><br>
-            <div id="display-words" style="text-align: center"></div>
-            <div id = "underscore" style="text-align: center"></div>
+            <h1>Word Guess Game:</h1>
+            <h2>The Band Edition</h2>
+            <hr>
+            <p id="key-to-start">Instructions: Choose any letter on your keyboard to begin...</p>
+            <p id="key-to-start">You have 10 chances to guess the right musical instrument</p>
+            <hr>
+            <div id="display-words" style="text-align: center">_ _ _ _ _ </div>
+            <div id="underscore" style="text-align: center"></div>
+            <hr>
             <div id="letters-guessed" style="text-align: center">Guesses Left: </div>
-            <div id="guesses-remaining" style = "text-align: center">Guesses Remaining: </div>
+            <div id="guesses-remaining" style="text-align: center">Guesses Remaining: </div>
             <div id="games-won" style="text-align: center">Games Won: </div>
             <div id="games-lost" style="text-align: center">Games Lost: </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <footer>
-            <nav class="navbar navbar-light bg-light" style="text-align: center">
-                <span class="navbar-brand mb-0" style="text-align: center; position: fixed; margin-top: 50px;">Copyright ©</span>
-            </nav>
-        </footer>
+        </div>
+        <div class="container" style="margin-left: 4%;">
+                <img src="./images/acoustic-acoustic-guitar-bass-258283.jpg">
+                <img src="./images/adult-band-bokeh-417456.jpg">
+                <img src="./images/brass-brass-instrument-detail-51932.jpg">
+                <img src="./images/trombone.jpeg">
+                <img src="./images/trumpet.jpg">
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
